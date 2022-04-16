@@ -4,7 +4,8 @@
       <div
         class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-grey"
       >
-        <a href="#" class="flex items-center h-full text-xl">Job Search</a>
+        <a href="#" class="flex items-center h-full text-xl">{{ brand }}</a>
+        <h2 class="flex items-center h-full ml-8">Developed by {{ author }}</h2>
       </div>
     </div>
   </header>
@@ -13,6 +14,12 @@
 <script>
 export default {
   name: 'MainNav',
+  data() {
+    return {
+      brand: 'Job Search',
+      author: 'Alex Corvin',
+    };
+  },
 };
 </script>
 
