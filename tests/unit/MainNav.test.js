@@ -23,32 +23,22 @@ describe('MainNav', () => {
 
   describe('when user is logged out', () => {
     it('prompts the user to sign in', () => {
-      const wrapper = mount(MainNav, {
-        data() {
-          return {
-            isLoggedIn: false,
-          };
-        },
-      });
-      const loginButton = wrapper.findComponent({ name: 'ActionButton' });
-      const profileImage = wrapper.findComponent({ name: 'ProfileImage' });
+      const wrapper = mount(MainNav);
+      const loginButton = wrapper.find("[data-test='login-button']");
       expect(loginButton.exists()).toBe(true);
-      expect(profileImage.exists()).toBe(false);
     });
   });
 
   describe('when user logs in', () => {
-    it('displays user profile picture', () => {
-      const wrapper = mount(MainNav, {
-        data() {
-          return {
-            isLoggedIn: true,
-          };
-        },
-      });
-      const loginButton = wrapper.findComponent({ name: 'ActionButton' });
-      const profileImage = wrapper.findComponent({ name: 'ProfileImage' });
-      expect(loginButton.exists()).toBe(false);
+    it('displays user profile picture', async () => {
+      const wrapper = mount(MainNav);
+      let profileImage = wrapper.find("[data-test='profile-image']");
+      expect(profileImage.exists()).toBe(false);
+
+      const loginButton = wrapper.find("[data-test='login-button']");
+      await loginButton.trigger('click');
+
+      profileImage = wrapper.find("[data-test='profile-image']");
       expect(profileImage.exists()).toBe(true);
     });
   });
