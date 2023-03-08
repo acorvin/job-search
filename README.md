@@ -1,10 +1,14 @@
 # Job Search App
 
-A job search website developed using Vue3, Pinia, and TailwindCSS.
+This project is a clone of the Google Careers job search page, developed using Vue.js 3, Pinia, Typescript, and TailwindCSS. It is a real-world application TDD development practices and includes unit tests for the critical elements of the app ecosystem using Vitest and Vue Testing Library.
 
 ## Preview
 
 ![preview](preview-corvin-careers.gif?raw=true)
+
+## Features
+
+The application allows users to search for job postings by location, keywords, and category. The search results are displayed in a paginated table, with each row showing the job title, location, and date posted. Users are able to select jobs to view detailed descriptions and filter through selcted job criteria.
 
 ## Project Setup
 
