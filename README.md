@@ -2,6 +2,10 @@
 
 A job search website developed using Vue3, Pinia, and TailwindCSS.
 
+## Preview
+
+![preview](preview-corvin-careers.gif?raw=true)
+
 ## Project Setup
 
 ```sh
@@ -31,6 +35,13 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+### Technologies
+
+- VueJs3
+- Typescript
+- Pinia
+- TailwindCSS
 
 ### Author
 
