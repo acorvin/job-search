@@ -1,4 +1,4 @@
-# Job Search App
+# Job Search App - In progress
 
 This project is a clone of the Google Careers job search page, developed using Vue.js 3, Pinia, Typescript, and TailwindCSS. It is a real-world application TDD development practices and includes unit tests for the critical elements of the app ecosystem using Vitest and Vue Testing Library.
 
