@@ -10,7 +10,7 @@
         </div>
 
         <div class="col-span-5 col-start-7 self-center justify-self-center">
-          <img class="h-90 w-90 object-contain" src="../img/vuejs-logo.png" alt="" />
+          <img class="h-90 w-90 object-contain" src="../../img/vuejs-logo.png" alt="" />
         </div>
 
         <div class="col-span-1 col-start-12"></div>
