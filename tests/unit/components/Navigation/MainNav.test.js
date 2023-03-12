@@ -7,8 +7,14 @@ import MainNav from '@/components/Navigation/MainNav.vue'
 // Disply company name
 describe('MainNav', () => {
   const renderMainNav = () => {
+    const $route = {
+      name: 'Home'
+    }
     render(MainNav, {
       global: {
+        mocks: {
+          $route
+        },
         stubs: {
           FontAwesomeIcon: true,
           RouterLink: RouterLinkStub
@@ -16,6 +22,7 @@ describe('MainNav', () => {
       }
     })
   }
+
   it('displays company name', () => {
     renderMainNav()
     const companyName = screen.getByText('CorvinCareers')

@@ -9,8 +9,10 @@
         <!-- Nav Menu Start -->
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
-            <li v-for="menuItem in menuItems" :key="menuItem" class="ml-9 h-full first:ml-0">
-              <a href="" class="flex h-full items-center py-2.5">{{ menuItem }}</a>
+            <li v-for="menuItem in menuItems" :key="menuItem.text" class="ml-9 h-full first:ml-0">
+              <router-link :to="menuItem.url" class="flex h-full items-center py-2.5">{{
+                menuItem.text
+              }}</router-link>
             </li>
           </ul>
         </nav>
@@ -38,7 +40,14 @@ export default {
   },
   data() {
     return {
-      menuItems: ['Teams', 'Location', 'Life at Corvin Careers', 'How We Hire', 'Students', 'Jobs'],
+      menuItems: [
+        { text: 'Teams', url: '/' },
+        { text: 'Location', url: '/' },
+        { text: 'Life at Corvin Careers', url: '/' },
+        { text: 'How We Hire', url: '/' },
+        { text: 'Students', url: '/' },
+        { text: 'Jobs', url: '/jobs/results' }
+      ],
       isLoggedIn: false
     }
   },
