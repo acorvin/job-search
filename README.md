@@ -8,7 +8,7 @@ This project is a clone of the Google Careers job search portal, developed using
 
 ## Features
 
-The application allows users to search for job postings by location, keywords, and category. The search results are displayed in a paginated table, with each row showing the job title, location, and date posted. Users are able to select jobs to view detailed descriptions and filter through selcted job criteria.
+The application allows users to search for mock job postings by location, keywords, and category. The search results are displayed in a paginated table, with each row showing the job title, location, and date posted. Users are able to select jobs to view detailed descriptions and filter through selcted job criteria.
 
 ## Project Setup
 
