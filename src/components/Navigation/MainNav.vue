@@ -2,8 +2,11 @@
   <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed top-0 left-0 h-16 w-full bg-white">
       <div class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8">
-        <a class="flex h-full items-center text-xl" :href="url">{{ company }}</a>
-
+        <!-- Route Logo to home page -->
+        <router-link :to="{ name: 'Home' }" class="flex h-full items-center text-xl"
+          >CorvinCareers
+        </router-link>
+        <!-- Nav Menu Start -->
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
             <li v-for="menuItem in menuItems" :key="menuItem" class="ml-9 h-full first:ml-0">
@@ -11,6 +14,7 @@
             </li>
           </ul>
         </nav>
+        <!-- Profile Image Start -->
         <div class="ml-auto flex h-full items-center">
           <profile-image v-if="isLoggedIn" />
           <action-button v-else text="Sign in" @click="loginUser" />
@@ -34,8 +38,6 @@ export default {
   },
   data() {
     return {
-      company: 'Corvin Careers',
-      url: 'https://careers.google.com',
       menuItems: ['Teams', 'Location', 'Life at Corvin Careers', 'How We Hire', 'Students', 'Jobs'],
       isLoggedIn: false
     }
