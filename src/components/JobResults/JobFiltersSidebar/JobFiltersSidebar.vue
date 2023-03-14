@@ -7,35 +7,9 @@
           <action-button text="Clear Filters" type="secondary" />
         </div>
       </div>
-      <collapsible-accordion header="Job Type">Placeholder</collapsible-accordion>
+      <collapsible-accordion header="Degree">Placeholder</collapsible-accordion>
 
-      <collapsible-accordion header="Organizations">
-        <div class="mt-5">
-          <fieldset>
-            <ul class="flex flex-row flex-wrap">
-              <li class="h-8 w-1/2">
-                <input type="checkbox" id="WattaVue" class="mr-3" />
-                <label for="WattaVue">WattaVue</label>
-              </li>
-
-              <li class="h-8 w-1/2">
-                <input type="checkbox" id="VueBetcha" class="mr-3" />
-                <label for="VueBetcha">VueBetcha</label>
-              </li>
-
-              <li class="h-8 w-1/2">
-                <input type="checkbox" id="VueGotIt" class="mr-3" />
-                <label for="VueGotIt">VueGotIt</label>
-              </li>
-
-              <li class="h-8 w-1/2">
-                <input type="checkbox" id="VueTube" class="mr-3" />
-                <label for="VueTube">VueTube</label>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-      </collapsible-accordion>
+      <job-filters-sidebar-organizations />
     </section>
   </div>
 </template>
@@ -43,10 +17,11 @@
 <script>
 import ActionButton from '@/components/Shared/ActionButton.vue'
 import CollapsibleAccordion from '@/components/Shared/CollapsibleAccordion.vue'
+import JobFiltersSidebarOrganizations from '@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarOrganizations.vue'
 
 export default {
   name: 'JobFiltersSidebar',
-  components: { ActionButton, CollapsibleAccordion }
+  components: { ActionButton, CollapsibleAccordion, JobFiltersSidebarOrganizations }
 }
 </script>
 
