@@ -45,12 +45,12 @@ describe('TheHeadline', () => {
 
   it('removes interval when component disappears', () => {
     const clearInterval = vi.fn()
-
     vi.stubGlobal('clearInterval', clearInterval)
 
     const { unmount } = render(TheHeadline)
     unmount()
 
     expect(clearInterval).toHaveBeenCalled()
+    vi.unstubAllGlobals()
   })
 })
