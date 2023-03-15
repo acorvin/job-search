@@ -1,4 +1,18 @@
 {
+  "spotlights": [
+    {
+      "id": 1,
+      "img": "https://images.unsplash.com/photo-1556075798-4825dfaaf498",
+      "title": "Cloud Engineering",
+      "description": "Build fun stuff in the cloud. It's a lot of fun, we promise!"
+    },
+    {
+      "id": 2,
+      "img": "https://images.unsplash.com/photo-1511376777868-611b54f68947",
+      "title": "Executive Leadership",
+      "description": "Be a leader for everyone. Leadership builds character."
+    }
+  ],
   "jobs": [
     {
       "id": 1,
@@ -2069,12 +2083,7 @@
       "organization": "Vue and a Half Men",
       "degree": "Ph.D.",
       "jobType": "Part-time",
-      "locations": [
-        "Santiago",
-        "Santa Ana-Anaheim",
-        "Brussels",
-        "Philadelphia"
-      ],
+      "locations": ["Santiago", "Santa Ana-Anaheim", "Brussels", "Philadelphia"],
       "minimumQualifications": [
         "Disintermediate collaborative platforms, embrace 24/7 interfaces, and integrate sticky relationships",
         "Synthesize 24/365 methodologies, empower cutting-edge e-services, and deliver rich e-services",
@@ -2373,12 +2382,7 @@
       "organization": "VueTube",
       "degree": "Master's",
       "jobType": "Temporary",
-      "locations": [
-        "Santa Ana-Anaheim",
-        "Singapore",
-        "Mexico City",
-        "Edmonton"
-      ],
+      "locations": ["Santa Ana-Anaheim", "Singapore", "Mexico City", "Edmonton"],
       "minimumQualifications": [
         "Incubate integrated networks, incentivize innovative e-services, and synthesize 24/365 info-mediaries",
         "Generate e-business infrastructures, target viral mindshare, and re-intermediate killer metrics",
