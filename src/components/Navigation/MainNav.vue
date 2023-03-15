@@ -44,7 +44,7 @@ export default {
   data() {
     return {
       menuItems: [
-        { text: 'Teams', url: '/' },
+        { text: 'Teams', url: '/teams' },
         { text: 'Location', url: '/' },
         { text: 'Life at Corvin Careers', url: '/' },
         { text: 'How We Hire', url: '/' },
