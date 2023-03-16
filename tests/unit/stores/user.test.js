@@ -19,4 +19,18 @@ describe('loginUser', () => {
     store.loginUser()
     expect(store.isLoggedIn).toBe(true)
   })
+
+  it('stores organizations the user would like to filter jobs by', () => {
+    const store = useUserStore()
+    expect(store.selectedOrganizations).toEqual([])
+  })
+
+  describe('ADD_SELECTED_ORGANIZATIONS', () => {
+    it('updates organizations the user has filtered jobs by', () => {
+      const store = useUserStore()
+      store.ADD_SELECTED_ORGANIZATIONS(['Org1', 'Org2'])
+
+      expect(store.selectedOrganizations).toEqual(['Org1', 'Org2'])
+    })
+  })
 })

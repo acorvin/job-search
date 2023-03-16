@@ -192,7 +192,7 @@
     {
       "id": 8,
       "title": "Angular Developer",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Pursuing Degree",
       "jobType": "Part-time",
       "locations": ["Rotterdam"],
@@ -268,7 +268,7 @@
     {
       "id": 11,
       "title": "UI Coder",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Ph.D.",
       "jobType": "Part-time",
       "locations": ["Kuala Lumpur", "Berlin", "Albuquerque", "Nagoya"],
@@ -618,7 +618,7 @@
     {
       "id": 25,
       "title": "Frontend Ninja",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Associate",
       "jobType": "Temporary",
       "locations": ["Montréal"],
@@ -815,7 +815,7 @@
     {
       "id": 33,
       "title": "jQuery Designer",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Pursuing Degree",
       "jobType": "Part-time",
       "locations": ["Cologne", "Atlanta", "Milwaukee"],
@@ -1038,7 +1038,7 @@
     {
       "id": 42,
       "title": "Ruby Lead",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Master's",
       "jobType": "Full-time",
       "locations": ["Oporto"],
@@ -1136,7 +1136,7 @@
     {
       "id": 46,
       "title": "Kotlin Coder",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Pursuing Degree",
       "jobType": "Temporary",
       "locations": ["Jacksonville"],
@@ -1161,7 +1161,7 @@
     {
       "id": 47,
       "title": "Frontend Coder",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Ph.D.",
       "jobType": "Intern",
       "locations": ["New York"],
@@ -1234,7 +1234,7 @@
     {
       "id": 50,
       "title": "Go Supervisor",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Bachelor's",
       "jobType": "Intern",
       "locations": ["Barcelona", "Phoenix"],
@@ -1432,7 +1432,7 @@
     {
       "id": 58,
       "title": "CSS Supervisor",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Associate",
       "jobType": "Temporary",
       "locations": ["Memphis", "Budapest", "St Petersburg", "Munich"],
@@ -1457,7 +1457,7 @@
     {
       "id": 59,
       "title": "Swift Lead",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Associate",
       "jobType": "Part-time",
       "locations": ["Helsinki", "Edinburgh", "The Hague", "Marseille"],
@@ -1507,7 +1507,7 @@
     {
       "id": 61,
       "title": "Swift Manager",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Associate",
       "jobType": "Intern",
       "locations": ["Indianapolis", "Seattle", "Las Vegas"],
@@ -1606,7 +1606,7 @@
     {
       "id": 65,
       "title": "Full Stack Wizard",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Bachelor's",
       "jobType": "Full-time",
       "locations": ["Paris"],
@@ -1854,7 +1854,7 @@
     {
       "id": 75,
       "title": "Software Developer",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Master's",
       "jobType": "Part-time",
       "locations": ["Los Angeles", "Mexico City", "Fort Lauderdale"],
@@ -1978,7 +1978,7 @@
     {
       "id": 80,
       "title": "Backbone Director",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Master's",
       "jobType": "Temporary",
       "locations": ["Bangkok", "Toulouse", "Delhi", "Bangalore"],
@@ -2054,7 +2054,7 @@
     {
       "id": 83,
       "title": "JavaScript Programmer",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Associate",
       "jobType": "Temporary",
       "locations": ["Helsinki", "Bangalore", "Perth"],
@@ -2080,7 +2080,7 @@
     {
       "id": 84,
       "title": "Knockout Ninja",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Ph.D.",
       "jobType": "Part-time",
       "locations": ["Santiago", "Santa Ana-Anaheim", "Brussels", "Philadelphia"],
@@ -2279,7 +2279,7 @@
     {
       "id": 92,
       "title": "Backbone Developer",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Bachelor's",
       "jobType": "Temporary",
       "locations": ["Lisbon", "Bangalore"],
@@ -2404,7 +2404,7 @@
     {
       "id": 97,
       "title": "Mobile Specialist",
-      "organization": "Vue and a Half Men",
+      "organization": "Vue Betcha",
       "degree": "Ph.D.",
       "jobType": "Temporary",
       "locations": ["Bilbao", "Prague"],
