@@ -26,7 +26,7 @@ describe('CollapsibleAccordion', () => {
       header: 'My Category'
     }
     const slots = {
-      header: '<h3>My nested child</h3>'
+      default: '<h3>My nested child</h3>'
     }
     const config = { props, slots }
 
@@ -35,11 +35,11 @@ describe('CollapsibleAccordion', () => {
     expect(screen.queryByText('My nested child')).not.toBeInTheDocument()
     const button = screen.getByRole('button', { name: /my category/i })
     await userEvent.click(button)
-    expect(screen.queryByText('My nested child')).toBeInTheDocument()
+    expect(screen.getByText('My nested child')).toBeInTheDocument()
   })
 
   describe('when parent does not provide custom child content', () => {
-    it('renders child content', async () => {
+    it('renders default content', async () => {
       const props = {
         header: 'My Category'
       }
@@ -50,7 +50,7 @@ describe('CollapsibleAccordion', () => {
 
       const button = screen.getByRole('button', { name: /my category/i })
       await userEvent.click(button)
-      expect(screen.queryByText('Someone forgot to populate me!')).toBeInTheDocument()
+      expect(screen.getByText('Someone forgot to populate me!')).toBeInTheDocument()
     })
   })
 })
