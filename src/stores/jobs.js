@@ -6,6 +6,7 @@ import { useUserStore } from '@/stores/user'
 
 export const FETCH_JOBS = 'FETCH_JOBS'
 export const UNIQUE_ORGANIZATIONS = 'UNIQUE_ORGANIZATIONS'
+export const UNIQUE_JOB_TYPES = 'UNIQUE_JOB_TYPES'
 export const FILTERED_JOBS_BY_ORGANIZATIONS = 'FILTERED_JOBS_BY_ORGANIZATIONS'
 
 export const useJobsStore = defineStore('jobs', {
@@ -23,6 +24,11 @@ export const useJobsStore = defineStore('jobs', {
       const uniqueOrganizations = new Set()
       state.jobs.forEach((job) => uniqueOrganizations.add(job.organization))
       return uniqueOrganizations
+    },
+    [UNIQUE_JOB_TYPES](state) {
+      const uniqueJobTypes = new Set()
+      state.jobs.forEach((job) => uniqueJobTypes.add(job.jobType))
+      return uniqueJobTypes
     },
     [FILTERED_JOBS_BY_ORGANIZATIONS](state) {
       const userStore = useUserStore()
