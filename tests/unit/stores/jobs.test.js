@@ -103,4 +103,41 @@ describe('getters', () => {
       })
     })
   })
+
+  describe('FILTERED_JOBS_BY_JOB_TYPES', () => {
+    it('identifies jobs that are associated with given job types', () => {
+      const jobsStore = useJobsStore()
+      jobsStore.jobs = [
+        { jobType: 'Full-time' },
+        { jobType: 'Temporary' },
+        { jobType: 'Part-time' }
+      ]
+      const userStore = useUserStore()
+      userStore.selectedJobTypes = ['Full-time', 'Part-time']
+
+      const result = jobsStore.FILTERED_JOBS_BY_JOB_TYPES
+
+      expect(result).toEqual([{ jobType: 'Full-time' }, { jobType: 'Part-time' }])
+    })
+    describe('when the user has not selected any job types', () => {
+      it('returns all jobs', () => {
+        const jobsStore = useJobsStore()
+        jobsStore.jobs = [
+          { jobType: 'Full-time' },
+          { jobType: 'Temporary' },
+          { jobType: 'Part-time' }
+        ]
+        const userStore = useUserStore()
+        userStore.selectedJobTypes = []
+
+        const result = jobsStore.FILTERED_JOBS_BY_JOB_TYPES
+
+        expect(result).toEqual([
+          { jobType: 'Full-time' },
+          { jobType: 'Temporary' },
+          { jobType: 'Part-time' }
+        ])
+      })
+    })
+  })
 })
