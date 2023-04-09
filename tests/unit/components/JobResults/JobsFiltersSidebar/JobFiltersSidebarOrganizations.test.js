@@ -63,7 +63,7 @@ describe('JobFiltersSidebarOrganizations', () => {
       await userEvent.click(button)
 
       const googleCheckbox = screen.getByRole('checkbox', {
-        name: /google/i
+        name: /apple/i
       })
       await userEvent.click(googleCheckbox)
 

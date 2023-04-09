@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { stringifyExpression } from '@vue/compiler-core'
+import { computed, ref } from 'vue'
 
 export default {
   name: 'CollapsibleAccordion',
@@ -27,19 +27,18 @@ export default {
       required: true
     }
   },
-  data() {
+  setup() {
+    const isOpen = ref(false)
+
+    const open = () => {
+      isOpen.value = !isOpen.value
+    }
+    const caretIcon = computed(() => (isOpen.value ? ['fas', 'angle-up'] : ['fas', 'angle-down']))
+
     return {
-      isOpen: false
-    }
-  },
-  computed: {
-    caretIcon() {
-      return this.isOpen ? ['fas', 'angle-up'] : ['fas', 'angle-down']
-    }
-  },
-  methods: {
-    open() {
-      this.isOpen = !this.isOpen
+      caretIcon,
+      isOpen,
+      open
     }
   }
 }
