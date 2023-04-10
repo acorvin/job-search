@@ -1,10 +1,13 @@
+import type { Mock } from 'vitest'
 import { createPinia, setActivePinia } from 'pinia'
 import axios from 'axios'
 
+import type { Job } from '@/api/types'
 import { useJobsStore } from '@/stores/jobs'
 import { useUserStore } from '@/stores/user'
 
 vi.mock('axios')
+const axiosGetMock = axios.get as Mock
 
 describe('state', () => {
   beforeEach(() => {
@@ -25,7 +28,7 @@ describe('actions', () => {
 
   describe('FETCH_JOBS', () => {
     it('makes an api request and stores received jobs', async () => {
-      axios.get.mockResolvedValue({ data: ['Job 1', 'Job 2'] })
+      axiosGetMock.mockResolvedValue({ data: ['Job 1', 'Job 2'] })
 
       const store = useJobsStore()
 
@@ -36,8 +39,20 @@ describe('actions', () => {
   })
 })
 
-// Test Getters
 describe('getters', () => {
+  const createJob = (job: Partial<Job> = {}): Job => ({
+    id: 1,
+    title: 'Angular Developer',
+    organization: 'Vue and Me',
+    degree: 'Masters',
+    jobType: 'Intern',
+    locations: ['Lisbon'],
+    minimumQualifications: ['Mesh granular deliverables'],
+    preferredQualifications: ['Mesh wireless metrics'],
+    description: ['Away someone forget effect wait land.'],
+    dateAdded: '2021-07-04',
+    ...job
+  })
   beforeEach(() => {
     setActivePinia(createPinia())
   })
@@ -46,9 +61,9 @@ describe('getters', () => {
     it('finds unique organizations from last jobs', () => {
       const store = useJobsStore()
       store.jobs = [
-        { organization: 'Apple' },
-        { organization: 'Google' },
-        { organization: 'Apple' }
+        createJob({ organization: 'Apple' }),
+        createJob({ organization: 'Google' }),
+        createJob({ organization: 'Apple' })
       ]
 
       const result = store.UNIQUE_ORGANIZATIONS
@@ -60,7 +75,11 @@ describe('getters', () => {
   describe('UNIQUE_JOB_TYPES', () => {
     it('finds unique job types from list of jobs', () => {
       const store = useJobsStore()
-      store.jobs = [{ jobType: 'Full-time' }, { jobType: 'Temporary' }, { jobType: 'Full-time' }]
+      store.jobs = [
+        createJob({ jobType: 'Full-time' }),
+        createJob({ jobType: 'Temporary' }),
+        createJob({ jobType: 'Full-time' })
+      ]
       const result = store.UNIQUE_JOB_TYPES
 
       expect(result).toEqual(new Set(['Full-time', 'Temporary']))
@@ -73,7 +92,7 @@ describe('getters', () => {
         const userStore = useUserStore()
         userStore.selectedOrganizations = []
         const store = useJobsStore()
-        const job = { organization: 'Apple' }
+        const job = createJob({ organization: 'Apple' })
 
         const result = store.INCLUDE_JOB_BY_ORGANIZATION(job)
 
@@ -85,7 +104,7 @@ describe('getters', () => {
       const userStore = useUserStore()
       userStore.selectedOrganizations = ['Apple', 'Google']
       const store = useJobsStore()
-      const job = { organization: 'Apple' }
+      const job = createJob({ organization: 'Apple' })
 
       const result = store.INCLUDE_JOB_BY_ORGANIZATION(job)
 
@@ -99,7 +118,7 @@ describe('getters', () => {
         const userStore = useUserStore()
         userStore.selectedJobTypes = []
         const store = useJobsStore()
-        const job = { jobType: 'Full-time' }
+        const job = createJob({ jobType: 'Full-time' })
 
         const result = store.INCLUDE_JOB_BY_JOB_TYPE(job)
 
@@ -111,7 +130,7 @@ describe('getters', () => {
       const userStore = useUserStore()
       userStore.selectedJobTypes = ['Full-time', 'Part-time']
       const store = useJobsStore()
-      const job = { jobType: 'Full-time' }
+      const job = createJob({ jobType: 'Full-time' })
 
       const result = store.INCLUDE_JOB_BY_JOB_TYPE(job)
 
