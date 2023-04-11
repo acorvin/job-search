@@ -17,9 +17,14 @@ describe('state', () => {
     expect(store.selectedOrganizations).toEqual([])
   })
 
-  it('stores job types the use would like to filter jobs by', () => {
+  it('stores job types the user would like to filter jobs by', () => {
     const store = useUserStore()
     expect(store.selectedJobTypes).toEqual([])
+  })
+
+  it('stores degrees user would like to filter jobs by', () => {
+    const store = useUserStore()
+    expect(store.selectedDegrees).toEqual([])
   })
 })
 
