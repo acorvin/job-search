@@ -18,7 +18,7 @@ const interval = ref<ReturnType<typeof setInterval>>()
 
 const actionClasses = computed(() => {
   return {
-    [action.value.toLocaleLowerCase()]: true
+    [action.value.toLowerCase()]: true
   }
 })
 
