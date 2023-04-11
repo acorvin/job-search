@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed } from 'vue'
 import ActionButton from '@/components/Shared/ActionButton.vue'
 import CollapsibleAccordion from '@/components/Shared/CollapsibleAccordion.vue'
