@@ -4,7 +4,11 @@
       <div class="flex flex-row justify-between">
         <h3 class="my-4 text-base font-semibold">What do you want to do?</h3>
         <div class="flex items-center text-sm">
-          <action-button text="Clear Filters" type="secondary" />
+          <action-button
+            text="Clear Filters"
+            type="secondary"
+            @click="userStore.CLEAR_USER_JOB_FILTER_SELECTIONS"
+          />
         </div>
       </div>
       <job-filters-sidebar-checkbox-group
@@ -29,12 +33,11 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import ActionButton from '@/components/Shared/ActionButton.vue'
-import CollapsibleAccordion from '@/components/Shared/CollapsibleAccordion.vue'
 import JobFiltersSidebarCheckboxGroup from '@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue'
 
 import { useDegreesStore } from '@/stores/degrees'
 import { useJobsStore } from '@/stores/jobs'
-import { ADD_SELECTED_DEGREES, useUserStore } from '@/stores/user'
+import { useUserStore } from '@/stores/user'
 
 const jobsStore = useJobsStore()
 const UNIQUE_ORGANIZATIONS = computed(() => jobsStore.UNIQUE_ORGANIZATIONS)
