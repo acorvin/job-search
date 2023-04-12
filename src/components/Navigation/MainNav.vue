@@ -49,7 +49,7 @@ const LOGIN_USER = userStore.LOGIN_USER
 const isLoggedIn = computed(() => userStore.isLoggedIn)
 
 const headerHeightClass = computed(() => ({
-  'h-16': isLoggedIn.value,
+  'h-16': !isLoggedIn.value,
   'h-32': isLoggedIn.value
 }))
 </script>

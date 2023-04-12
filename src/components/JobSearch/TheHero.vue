@@ -1,6 +1,6 @@
 <template>
   <main class="flex h-screen flex-col">
-    <section class="pt-20 pb-20">
+    <section class="pt-10 pb-20">
       <div class="grid grid-cols-12">
         <div class="col-span-1 col-start-1"></div>
 
