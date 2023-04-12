@@ -1,4 +1,4 @@
-# Job Search Portal - In progress
+# Job Search Portal
 
 This project is a clone of the Google Careers job search portal, developed using Vue.js 3, Pinia, Typescript, and TailwindCSS. It is a real-world application developed using test-driven practices and includes unit tests for the critical elements of the app ecosystem using Vitest and Vue Testing Library.
 
